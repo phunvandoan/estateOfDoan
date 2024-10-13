@@ -1,0 +1,105 @@
+@import "../../responsive.scss";
+
+.homePage {
+  display: flex;
+  height: 100%;
+
+  .textContainer {
+    flex: 3;
+
+    .wrapper {
+      padding-right: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      height: 100%;
+
+      p {
+        font-size: 18px;
+        line-height: 1.6;
+        font-family: "Times New Roman", serif;
+        color: #333;
+        margin: 20px 0;
+        text-align: justify;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        border-left: 4px solid #a45d3d;
+        padding-left: 15px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+
+        span {
+          font-size: 50px;
+          font-weight: bold;
+          color: #a45d3d;
+          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+          line-height: 0.8;
+        }
+      }
+
+      @include lg {
+        padding-right: 50px;
+      }
+
+      @include md {
+        padding: 0;
+      }
+
+      @include sm {
+        justify-content: flex-start;
+      }
+
+      .title {
+        font-size: 64px;
+
+        @include lg {
+          font-size: 48px;
+        }
+      }
+
+      .boxes {
+        display: flex;
+        justify-content: space-between;
+
+        @include sm {
+          display: none;
+        }
+
+        h1 {
+          font-size: 36px;
+
+          @include lg {
+            font-size: 32px;
+          }
+        }
+
+        h2 {
+          font-size: 20px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .imgContainer {
+    flex: 2;
+    background-color: #fcf5f3;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @include md {
+      display: none;
+    }
+
+    img {
+      width: 115%;
+      position: absolute;
+      right: 0;
+
+      @include lg {
+        width: 105%;
+      }
+    }
+  }
+}

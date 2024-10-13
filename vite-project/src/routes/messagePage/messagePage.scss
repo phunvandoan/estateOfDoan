@@ -1,0 +1,39 @@
+@import "../../responsive.scss";
+
+.messagePage {
+  // display: flex;
+  height: 100%;
+  padding: 50px 0;
+
+  @include md {
+    flex-direction: column;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .chatContainer {
+    // flex: 1;
+    background-color: #fcf5f3;
+    height: 100%;
+
+    @include md {
+      flex: none;
+      height: max-content;
+    }
+
+    .wrapper {
+      padding: 0px 20px;
+      height: 100%;
+
+      hr {
+        border: none;
+        height: 4px;
+        background-color: pink;
+        margin: 20px 0;
+      }
+    }
+  }
+}
